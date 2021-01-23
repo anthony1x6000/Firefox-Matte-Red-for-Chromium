@@ -1,0 +1,33 @@
+{
+   "description": "Theme based off of the Matte Black (Red) theme on Firefox add-ons",
+   "icons": {
+      "128": "images/icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Red Matte Black Firefox",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 255, 255, 255 ],
+         "frame": [ 12, 12, 12 ],
+         "frame_inactive": [ 13, 13, 13 ],
+         "frame_incognito": [ 12, 12, 12 ],
+         "frame_incognito_inactive": [ 12, 12, 13 ],
+         "ntp_background": [ 35, 35, 35 ],
+         "ntp_text": [ 255, 255, 255 ],
+         "tab_text": [ 255, 255, 255 ],
+         "toolbar": [ 50, 50, 52 ]
+      },
+      "images": {
+         "theme_ntp_background": "images/bg.png",
+         "theme_toolbar": "images/tab.png"
+      },
+      "properties": {
+         "ntp_background_repeat": "repeat",
+         "ntp_logo_alternate": 0
+      },
+      "tints": {
+         "buttons": [ -1, -1, 0.96 ]
+      }
+   },
+   "version": "0.1"
+}
