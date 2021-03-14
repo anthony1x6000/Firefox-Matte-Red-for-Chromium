@@ -1,7 +1,8 @@
 # Firefox-Matte-Red-for-Chromium
 Chromium theme based off of the Firefox Matte Red theme
 
-How to get this theme - Make sure to enable developer mode
+## How to get this theme - Make sure to enable developer mode
+DOWNLOAD FROM RELEASES INSTEAD OF NO LONGER EXISTENT DOWNLOAD LINK
 <img src="https://i.ibb.co/Wp2Dsqd/tutorial.gif">
 
 Virus total:
