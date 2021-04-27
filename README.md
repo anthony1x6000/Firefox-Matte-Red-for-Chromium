@@ -2,15 +2,15 @@
 Chromium theme based off of the Firefox Matte Red theme
 
 ## Checksums and stuff
-SHA-1: ECA096C648A0C2890E169007DB375D069A7EDE20
+SHA-1: [ECA096C648A0C2890E169007DB375D069A7EDE20](https://github.com/anthony1x6000/Firefox-Matte-Red-for-Chromium/releases/download/v1.0/Firefox.Matte.Red.zip)
 
-SHA-256: 022F63AF1A9722ECDCEC24D56D2CF68F82CA837320D5DBC910A6ADFBFC218185 
+SHA-256: [022F63AF1A9722ECDCEC24D56D2CF68F82CA837320D5DBC910A6ADFBFC218185](https://github.com/anthony1x6000/Firefox-Matte-Red-for-Chromium/releases/download/v1.0/Firefox.Matte.Red.zip) 
 
 Virustotal:
 https://www.virustotal.com/gui/file/022f63af1a9722ecdcec24d56d2cf68f82ca837320d5dbc910a6adfbfc218185/detection
 
 ## Installation Steps
-1. Downlooad the latest release:
+1. Downlooad the [latest](https://github.com/anthony1x6000/Firefox-Matte-Red-for-Chromium/releases/) release:
    
    ![Step 1 Download the latest release](https://i.ibb.co/CV0Hzdd/image.png)
    
