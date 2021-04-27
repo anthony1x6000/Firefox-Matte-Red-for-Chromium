@@ -5,6 +5,7 @@ I'm sure you know how to install unverified custom chromiumn themes. If not just
 Or follow the instructions at the bottom of the page. 
 
 ## Checksums and stuff
+SHA-1: ECA096C648A0C2890E169007DB375D069A7EDE20
 SHA-256: 022F63AF1A9722ECDCEC24D56D2CF68F82CA837320D5DBC910A6ADFBFC218185 
 
 Virustotal:
