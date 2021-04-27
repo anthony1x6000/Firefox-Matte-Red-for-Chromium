@@ -39,6 +39,6 @@ https://www.virustotal.com/gui/file/022f63af1a9722ecdcec24d56d2cf68f82ca837320d5
    
    ![Select Folder](https://i.ibb.co/DGrvTcG/image.png)
 
-7. Now the theme is installed! 
+7. Now the theme should be installed! 
    
    ![Theme itself](https://i.ibb.co/cX1gmR1/image.png)
