@@ -1,8 +1,5 @@
-# Firefox-Matte-Red-for-Chromium
+# Firefox Matte-Red theme for Chromium
 Chromium theme based off of the Firefox Matte Red theme
-
-I'm sure you know how to install unverified custom chromiumn themes. If not just search it up! 
-Or follow the instructions at the bottom of the page. 
 
 ## Checksums and stuff
 SHA-1: ECA096C648A0C2890E169007DB375D069A7EDE20
