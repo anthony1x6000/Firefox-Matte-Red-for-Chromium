@@ -1,0 +1,83 @@
+name: Extract Color Code and Create Release
+
+on:
+  discussion_comment:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install PyYAML
+
+      - name: Extract color code
+        id: extract-color
+        run: |
+          import re
+          import yaml
+
+          with open('${{ github.event_path }}') as f:
+            data = yaml.safe_load(f)
+
+          comments = data['discussion']['comments']
+          subcolor = None
+
+          for comment in comments:
+            match = re.search(r'SUBMISSION:\s*#([A-Fa-f0-9]{6})', comment['body'])
+            if match:
+              subcolor = match.group(1)
+              break
+
+          if subcolor is None:
+            print('No valid color code found')
+            exit(1)
+
+          print(f'::set-output name=subcolor::{subcolor}')
+
+      - name: Copy reference directory
+        run: |
+          cp -r reference ${{ steps.extract-color.outputs.subcolor }}
+
+      - name: Run colors.py script
+        run: |
+          python .github/workflows/colors.py ${{ steps.extract-color.outputs.subcolor }}/images/tab.png ${{ steps.extract-color.outputs.subcolor }} ${{ steps.extract-color.outputs.subcolor }}/images/tab.png
+
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.sha }}
+          release_name: Release ${{ github.sha }}
+          body: |
+            ### ${{ steps.extract-color.outputs.subcolor }}
+            [Download](${{ github.event.repository.html_url }}/releases/download/${{ github.sha }}/${{ steps.extract-color.outputs.subcolor }}.zip)
+            ![Color Preview](https://www.thecolorapi.com/id?format=svg&named=false&hex=${{ steps.extract-color.outputs.subcolor }})
+          draft: false
+          prerelease: false
+
+      - name: Zip new color directory
+        run: |
+          zip -r ${{ steps.extract-color.outputs.subcolor }}.zip ${{ steps.extract-color.outputs.subcolor }}
+
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./${{ steps.extract-color.outputs.subcolor }}.zip
+          asset_name: ${{ steps.extract-color.outputs.subcolor }}.zip
+          asset_content_type: application/zip

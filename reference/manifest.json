@@ -4,7 +4,7 @@
       "128": "images/icon.png"
    },
    "manifest_version": 2,
-   "name": "Red Matte Black Firefox",
+   "name": "Color Matte Black Firefox",
    "theme": {
       "colors": {
          "bookmark_text": [ 255, 255, 255 ],
