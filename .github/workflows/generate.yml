@@ -24,6 +24,7 @@ jobs:
       - name: Extract color code
         id: extract-color
         run: |
+          #!/usr/bin/env python
           import re
           import yaml
 
